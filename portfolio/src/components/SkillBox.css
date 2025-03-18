@@ -1,0 +1,29 @@
+.skillBox
+{
+    padding: 30px;
+}
+
+.skillBox .skillTitle
+{
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+}
+
+.skillBox .skillDesc
+{
+    padding: 10px;
+}
+
+.skillBox .skillDesc p
+{
+    text-wrap: pretty;
+    font-size: 120%;
+    padding: 0px 15px;
+}
+
+.skillBox .skillDesc a
+{
+    color: white;
+    font-weight: bold;
+}
