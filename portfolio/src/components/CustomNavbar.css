@@ -1,0 +1,27 @@
+.navbar
+{
+    background-color: rgba(51, 51, 51, 1);
+}
+
+.navbar-brand, .navbar-brand:hover, .nav-link.active
+{
+    color: white !important;
+}
+
+.nav-link:hover
+{
+    color: #4aaa53 !important;
+}
+
+.nav-link
+{
+    color: white;
+}
+
+.navbar-inner {
+    background:red !important;
+}
+
+/* .navbar-collapse {
+    background:red;
+} */

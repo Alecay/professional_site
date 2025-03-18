@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
 
-export default function ProfileDiv() {
+export default function Profile() {
   const profileStyles: React.CSSProperties = {
     background:
       "linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('/src/images/austin_night_cropped.jpg')",
@@ -10,7 +10,7 @@ export default function ProfileDiv() {
   };
 
   return (
-    <Container fluid style={profileStyles} id="proflie">
+    <Container fluid style={profileStyles} id="profile">
       <h1
         className="fw-bold"
         style={{ color: "white", textAlign: "center", fontSize: "4.5rem" }}

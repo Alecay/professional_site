@@ -1,18 +1,5 @@
-/* body
-{
-  width: 100%;
-} */
-
-.col, [class*="col-"]
-{
-  border: solid 1px;
-  text-align: center;
-}
-
 body
 {
-  /* background-color: rgb(211, 207, 207); */
-  background-color: gray;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
