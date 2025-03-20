@@ -1,0 +1,14 @@
+.resume
+{
+    text-align: center;
+    background-color: #4aaa53;
+    color: white;
+    padding: 30px;
+}
+
+.resume .title
+{
+    text-align: center;
+    font-size: 56px;
+    font-weight: bold;
+}
