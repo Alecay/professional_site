@@ -32,7 +32,7 @@ export default function About() {
         <Col lg={8} xs={12} className="mx-auto" style={{ paddingLeft: "20px" }}>
           <h1>Alec Groseclose</h1>
           <h4>
-            Computer Science Major, Software Developer, and Aspiring Video Game
+            Computer Science Major, Software Developer, and Aspiring Software
             Developer
           </h4>
 
@@ -53,6 +53,7 @@ export default function About() {
             <li>Bachelor of Science in Computer Science</li>
             <li>Minor in Mathematics</li>
             <li>Expected graduation date: December 2025</li>
+            <li>GPA: 3.56</li>
           </ul>
         </Col>
       </Row>
