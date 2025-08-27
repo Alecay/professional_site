@@ -1,0 +1,20 @@
+.navbar {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.navlink {
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.navlink:hover {
+  color: #4aaa53;
+}
+
+.navbrand {
+  font-size: 50px;
+  font-family: "Snell Roundhand", cursive;
+  font-weight: bold;
+  margin-left: 0.1vw;
+}

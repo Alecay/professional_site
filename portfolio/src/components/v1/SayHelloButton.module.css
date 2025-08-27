@@ -1,0 +1,15 @@
+/* SayHelloButton.module.css */
+.helloBtn {
+  background: none;
+  color: #4aaa53;
+  border: solid 3px #4aaa53;
+  border-radius: 999px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.helloBtn:hover {
+  background: #4aaa53;
+  color: white;
+  border: solid 3px #4aaa53;
+}
