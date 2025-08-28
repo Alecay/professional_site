@@ -8,12 +8,19 @@ interface Props {
   img?: ReactNode;
   icons?: IconProp[];
   iconStyle?: React.CSSProperties;
+  divStyle?: React.CSSProperties;
 }
 
-export default function SkillIcon({ icon, img, icons, iconStyle }: Props) {
+export default function SkillIcon({
+  icon,
+  img,
+  icons,
+  iconStyle,
+  divStyle,
+}: Props) {
   let getIcons = (icons: IconProp[]) => {
     return (
-      <span>
+      <span style={divStyle}>
         {icons.map((item) => (
           <FontAwesomeIcon icon={item} style={iconStyle}></FontAwesomeIcon>
         ))}
@@ -22,7 +29,7 @@ export default function SkillIcon({ icon, img, icons, iconStyle }: Props) {
   };
 
   return (
-    <div className="iconContainer">
+    <div className="iconContainer" style={divStyle}>
       {img != null ? (
         img
       ) : icon != null ? (

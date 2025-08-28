@@ -1,5 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import styles from "./ModernSkills.module.css";
+import SkillIcon from "../old/SkillIcon";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 
 export default function ModernSkills() {
   return (
@@ -17,20 +19,38 @@ export default function ModernSkills() {
         >
           {/* Column 1 */}
           <Col className={`${styles.skillCol} p-4 border-end`}>
-            <h4>Column 1</h4>
-            <p>Content for column one.</p>
+            <SkillIcon
+              icon={faCode}
+              iconStyle={{ fontSize: "30px" }}
+              divStyle={{ backgroundColor: "#4aaaa2ff", paddingTop: "10px" }}
+            />
+            <h4 className={`${styles.skillTitle}`}>Column 1</h4>
+            <p className={`${styles.skillSubtitle}`}>Content for column one.</p>
+            <p className={`${styles.skillAccentTitle}`}>Something labeled:</p>
           </Col>
 
           {/* Column 2 */}
           <Col className={`${styles.skillCol} p-4 border-end`}>
-            <h4>Column 2</h4>
-            <p>Content for column two.</p>
+            <SkillIcon
+              icon={faCode}
+              iconStyle={{ fontSize: "30px" }}
+              divStyle={{ backgroundColor: "#4aaaa2ff", paddingTop: "10px" }}
+            />
+            <h4 className={`${styles.skillTitle}`}>Column 2</h4>
+            <p className={`${styles.skillSubtitle}`}>Content for column two.</p>
           </Col>
 
           {/* Column 3 */}
           <Col className={`${styles.skillCol} p-4`}>
-            <h4>Column 3</h4>
-            <p>Content for column three.</p>
+            <SkillIcon
+              icon={faCode}
+              iconStyle={{ fontSize: "30px" }}
+              divStyle={{ backgroundColor: "#4aaaa2ff", paddingTop: "10px" }}
+            />
+            <h4 className={`${styles.skillTitle}`}>Column 3</h4>
+            <p className={`${styles.skillSubtitle}`}>
+              Content for column three.
+            </p>
           </Col>
         </Row>
       </Container>

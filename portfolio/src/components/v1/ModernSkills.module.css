@@ -13,20 +13,38 @@
 }
 
 .skillsPanel {
-  border-radius: 50px;
-  width: 80%;
+  border-radius: 25px;
+  width: 90%;
   background-color: white;
 
-  border: 2px solid lightgray;
+  border: 1px solid lightgray;
   /* box-shadow: 2px 5px rgba(1, 1, 1, 0.1); */
 }
 
 .skillRow {
-  border-radius: 50px;
+  border-radius: 25px;
   min-height: 1000px;
 }
 
 .skillCol {
   height: 100%;
   min-height: 1000px;
+}
+
+.skillTitle {
+  font-family: "eurostile", sans-serif;
+  font-weight: 800;
+  color: #141c3a;
+  margin-bottom: 20px;
+}
+
+.skillSubtitle {
+  font-family: "europa", sans-serif;
+  color: #141c3a;
+  margin-bottom: 40px;
+}
+
+.skillAccentTitle {
+  font-family: "europa", sans-serif;
+  color: #4aaa53;
 }
