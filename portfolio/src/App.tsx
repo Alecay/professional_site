@@ -7,6 +7,7 @@ import "./App.css";
 import ContactNav from "./components/v1/ContactNav";
 import ModernAbout from "./components/v1/ModernAbout";
 import ModernProfile from "./components/v1/ModernProfile";
+import ModernSkills from "./components/v1/ModernSkills";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
       <ContactNav />
       <ModernProfile />
       <ModernAbout />
+      <ModernSkills />
     </div>
   );
 }

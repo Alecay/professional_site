@@ -1,7 +1,7 @@
 .aboutContainer {
   background-color: #4aaa53;
   text-align: center;
-  padding: 144px 72px 288px;
+  padding: 144px 72px 144px;
   color: white;
 }
 
@@ -9,6 +9,7 @@
   font-size: 32px;
   font-weight: 800px;
   font-family: "eurostile", sans-serif;
+  margin-bottom: 15px;
 }
 
 .aboutSubtitle {
