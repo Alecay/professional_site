@@ -1,0 +1,31 @@
+.profileContainer {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.profileTile {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: "eurostile", sans-serif;
+  word-break: break-word;
+  color: #141c3a;
+}
+
+.profileSubtitle {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "europa", sans-serif;
+  word-break: break-word;
+  color: rgba(10, 10, 10, 0.9);
+  max-width: 700px;
+  text-wrap: wrap;
+  margin-top: 20px;
+}
+
+.profileImage {
+  width: 250px;
+  height: 250px;
+  padding: 0px;
+  border-radius: 100%;
+  margin-top: 60px;
+}

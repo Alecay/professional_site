@@ -1,43 +1,37 @@
+// CustomNavbar.tsx
+import { useState } from "react";
 import { Navbar, Container, Nav, NavLink } from "react-bootstrap";
-import SayHelloButton from "./SayHelloButton";
+import CustomNavbarToggle from "./CustomNavbarToggle";
+import ContactButton from "./ContactButton";
 import styles from "./ContactNav.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function CustomNavbar() {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <Navbar
-      className={styles.navbar}
-      fixed="top"
-      collapseOnSelect
+      expanded={expanded}
+      onToggle={setExpanded}
       expand="lg"
-      //   className={styles.customNavbar}
+      className={styles.navbar}
     >
       <Container>
-        {/* Navbar Brand on the Left */}
-        <Nav>
-          <Navbar.Brand href="#nav-icon" className={styles.navbrand}>
-            A
-          </Navbar.Brand>
-        </Nav>
+        <Navbar.Brand className={styles.navbrand}>A</Navbar.Brand>
 
-        {/* Toggler for Mobile View */}
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          style={{ border: "none", boxShadow: "none" }}
-        >
-          <FontAwesomeIcon
-            icon={faBars}
-            style={{ color: "#4aaa53", fontSize: "1.5rem" }}
-          ></FontAwesomeIcon>
-        </Navbar.Toggle>
+        <CustomNavbarToggle
+          expanded={expanded}
+          setExpanded={setExpanded}
+          color="#4aaa53"
+          size={26}
+          controlsId="navbar-nav"
+          className="d-lg-none"
+        />
 
-        {/* Navbar Links on the Right */}
-        <Navbar.Collapse id="navbar-nav">
-          <Nav className="ms-auto ms-lg-auto gap-3 align-items-center w-100">
-            {/* ms-auto pushes links to the right */}
-            <NavLink className={styles.navlink}>Mentorship</NavLink>
-            <SayHelloButton />
+        <Navbar.Collapse id="navbar-nav" className="justify-content-lg-end">
+          <Nav className="gap-3 align-items-center">
+            <NavLink className={styles.navlink}>Skills</NavLink>
+            <NavLink className={styles.navlink}>Projects</NavLink>
+            <ContactButton />
           </Nav>
         </Navbar.Collapse>
       </Container>

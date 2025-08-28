@@ -1,0 +1,18 @@
+.aboutContainer {
+  background-color: #4aaa53;
+  text-align: center;
+  padding: 144px 72px 288px;
+  color: white;
+}
+
+.aboutTitle {
+  font-size: 32px;
+  font-weight: 800px;
+  font-family: "eurostile", sans-serif;
+}
+
+.aboutSubtitle {
+  font-size: 20px;
+  font-family: "europa", sans-serif;
+  max-width: 700px;
+}
