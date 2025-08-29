@@ -17,18 +17,19 @@
   width: 90%;
   background-color: white;
 
-  border: 1px solid lightgray;
+  border: 2px solid lightgray;
   /* box-shadow: 2px 5px rgba(1, 1, 1, 0.1); */
 }
 
 .skillRow {
   border-radius: 25px;
-  min-height: 1000px;
 }
 
 .skillCol {
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
   height: 100%;
-  min-height: 1000px;
 }
 
 .skillTitle {
@@ -41,7 +42,9 @@
 .skillSubtitle {
   font-family: "europa", sans-serif;
   color: #141c3a;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  max-width: 250px;
+  margin: auto;
 }
 
 .skillAccentTitle {

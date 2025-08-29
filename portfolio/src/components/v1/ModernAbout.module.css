@@ -6,7 +6,7 @@
 }
 
 .aboutTitle {
-  font-size: 32px;
+  font-size: 45px;
   font-weight: 800px;
   font-family: "eurostile", sans-serif;
   margin-bottom: 15px;
@@ -15,5 +15,5 @@
 .aboutSubtitle {
   font-size: 20px;
   font-family: "europa", sans-serif;
-  max-width: 700px;
+  max-width: 500px;
 }
