@@ -5,6 +5,7 @@ import "./App.css";
 // import Skills from "./components/old/Skills";
 // import Resume from "./components/old/Resume";
 import ContactNav from "./components/v1/ContactNav";
+import FooterNav from "./components/v1/FooterNav";
 import ModernAbout from "./components/v1/ModernAbout";
 import ModernProfile from "./components/v1/ModernProfile";
 import ModernSkills from "./components/v1/ModernSkills";
@@ -23,6 +24,7 @@ export default function App() {
       <ModernProfile />
       <ModernAbout />
       <ModernSkills />
+      <FooterNav />
     </div>
   );
 }

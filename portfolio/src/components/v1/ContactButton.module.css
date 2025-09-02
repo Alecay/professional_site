@@ -1,5 +1,5 @@
 /* ContactButton.module.css */
-.helloBtn {
+.contactBtn {
   background: none;
   color: #4aaa53;
   border: solid 3px #4aaa53;
@@ -8,8 +8,23 @@
   transition: all 0.3s ease;
 }
 
-.helloBtn:hover {
+.contactBtn:hover {
   background: #4aaa53;
   color: white;
   border: solid 3px #4aaa53;
+}
+
+.contactBtnAlt {
+  background: none;
+  color: white;
+  border: solid 3px white;
+  border-radius: 999px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.contactBtnAlt:hover {
+  background: black;
+  color: white;
+  border: solid 3px black;
 }

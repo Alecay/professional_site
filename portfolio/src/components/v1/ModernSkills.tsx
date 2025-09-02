@@ -45,6 +45,7 @@ export default function ModernSkills() {
               demonstrating my ability to adapt to the engine's tools and 
               workflows efficiently.`,
       icon: null,
+      image: `${import.meta.env.BASE_URL}images/godot_icon.svg`,
     },
     {
       title: "JavaScript, HTML, CSS",
@@ -136,18 +137,47 @@ export default function ModernSkills() {
         <Row
           className={`${styles.skillRow} text-center overflow-hidden row-cols-2 row-cols-sm-3 row-cols-md-4 g-3 justify-content-center`}
         >
-          {skills.map((skill, i) => (
-            <Col key={i} className={`${styles.skillCol} p-4`}>
-              <SkillIcon
-                icon={skill.icon ?? faCode}
-                iconStyle={{ fontSize: "30px" }}
-                divStyle={{ backgroundColor: "#4aaaa2ff", paddingTop: "10px" }}
-              />
-              <h4 className={`${styles.skillTitle}`}>{skill.title}</h4>
-              <p className={`${styles.skillSubtitle}`}>{skill.content}</p>
-              {/* <p className={`${styles.skillAccentTitle}`}>Something labeled:</p> */}
-            </Col>
-          ))}
+          {skills.map((skill, i) =>
+            skill.icon != null ? (
+              <Col key={i} className={`${styles.skillCol} p-4`}>
+                <SkillIcon
+                  icon={skill.icon}
+                  iconStyle={{
+                    // fontSize: "50px",
+                    width: "50px",
+                    height: "50px",
+                    margin: "auto",
+                  }}
+                  divStyle={{
+                    backgroundColor: "#4aaaa2ff",
+                  }}
+                />
+                <h4 className={`${styles.skillTitle}`}>{skill.title}</h4>
+                <p className={`${styles.skillSubtitle}`}>{skill.content}</p>
+                {/* <p className={`${styles.skillAccentTitle}`}>Something labeled:</p> */}
+              </Col>
+            ) : (
+              <Col key={i} className={`${styles.skillCol} p-4`}>
+                <SkillIcon
+                  img={
+                    skill.image != null ? (
+                      <img
+                        src={skill.image}
+                        className={`${styles.skillIconImage}`}
+                      />
+                    ) : null
+                  }
+                  iconStyle={{ fontSize: "30px" }}
+                  divStyle={{
+                    backgroundColor: "#4aaaa2ff",
+                  }}
+                />
+                <h4 className={`${styles.skillTitle}`}>{skill.title}</h4>
+                <p className={`${styles.skillSubtitle}`}>{skill.content}</p>
+                {/* <p className={`${styles.skillAccentTitle}`}>Something labeled:</p> */}
+              </Col>
+            )
+          )}
         </Row>
       </Container>
     </Container>

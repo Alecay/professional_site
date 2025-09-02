@@ -1,5 +1,6 @@
 // PasswordGate.tsx
 import { useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
 export default function PasswordGate({
   children,
@@ -26,27 +27,36 @@ export default function PasswordGate({
   if (unlocked) return <>{children}</>;
 
   return (
-    <div
+    <Container
+      fluid
+      className="d-flex flex-column justify-content-center align-items-center"
       style={{
         position: "fixed",
         inset: 0,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
         background: "#111",
         color: "#fff",
       }}
     >
-      <form onSubmit={handleSubmit}>
-        <h2>Site Locked</h2>
-        <input
-          type="password"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Enter password"
-        />
-        <button type="submit">Unlock</button>
-      </form>
-    </div>
+      <Row style={{ marginBottom: "200px" }}>
+        <h1 style={{ textAlign: "center", fontSize: "100px" }}>
+          Site is under development
+        </h1>
+      </Row>
+
+      <Row className="justify-content-center">
+        <Col xs="auto">
+          <form onSubmit={handleSubmit} style={{ textAlign: "center" }}>
+            <h2>Unlock Site</h2>
+            <input
+              type="password"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="Enter password"
+            />
+            <button type="submit">Unlock</button>
+          </form>
+        </Col>
+      </Row>
+    </Container>
   );
 }

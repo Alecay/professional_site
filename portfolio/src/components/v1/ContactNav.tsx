@@ -5,7 +5,7 @@ import CustomNavbarToggle from "./CustomNavbarToggle";
 import ContactButton from "./ContactButton";
 import styles from "./ContactNav.module.css";
 
-export default function CustomNavbar() {
+export default function ContactNavbar() {
   const [expanded, setExpanded] = useState(false);
 
   return (
