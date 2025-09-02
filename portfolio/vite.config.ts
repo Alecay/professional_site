@@ -1,15 +1,12 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react()],
-  // base:"/alecay.github.io/"
-  css:
-  {
-    modules:
-    {
-      scopeBehaviour: 'local'
-    }
-  }
-})
+  base: command === "build" ? "/professional_site/" : "/",
+  css: {
+    modules: {
+      scopeBehaviour: "local",
+    },
+  },
+}));

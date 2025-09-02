@@ -15,7 +15,7 @@ export default function ModernProfile() {
       </Row>
       <Row className="justify-content-center">
         <img
-          src="/src/images/profile_image.jpg"
+          src={`${import.meta.env.BASE_URL}images/profile_image.jpg`}
           alt="Avatar"
           className={styles.profileImage}
         />
