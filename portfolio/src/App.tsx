@@ -30,6 +30,7 @@ export default function App() {
         <ProjectCarousel
           slides={[
             {
+              kind: "image",
               src: `${
                 import.meta.env.BASE_URL
               }images/fluid_simulation_preview.PNG`,
@@ -38,21 +39,31 @@ export default function App() {
               text: "A GPU Simulation",
             },
             {
-              src: `${
-                import.meta.env.BASE_URL
-              }images/fluid_simulation_preview.PNG`,
-              alt: "Fluid Simulation",
-              title: "Fluid Simulation",
-              text: "A GPU Simulation",
+              kind: "image",
+              src: `${import.meta.env.BASE_URL}images/perlin_shadows_v2.gif`,
+              title: "Procedural Terrain & Shadows",
+              text: "A GLSL 2D shader for rendering 3D looking terrain with shadows",
             },
-            {
-              src: `${
-                import.meta.env.BASE_URL
-              }images/fluid_simulation_preview.PNG`,
-              alt: "Fluid Simulation",
-              title: "Fluid Simulation",
-              text: "A GPU Simulation",
-            },
+            // {
+            //   kind: "image",
+            //   src: `https://i.postimg.cc/K8hZFvyz/perlin-shadows.gif`,
+            //   title: "Procedural Terrain & Shadows",
+            //   text: "A GLSL 2D shader for rendering 3D looking terrain with shadows",
+            // },
+            // {
+            //   kind: "video",
+            //   src: `${import.meta.env.BASE_URL}images/perlin_shadows_video.mp4`,
+            //   title: "Procedural Terrain & Shadows",
+            //   text: "A GLSL 2D shader for rendering 3D looking terrain with shadows",
+            // },
+            // {
+            //   kind: "youtube",
+            //   videoId: `qTuoFzf2hi0`,
+            //   controls: false,
+            //   loop: true,
+            //   title: "Fluid Simulation",
+            //   text: "A GPU Simulation",
+            // },
           ]}
         />
       </Container>

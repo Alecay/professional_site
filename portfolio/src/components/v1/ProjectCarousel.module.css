@@ -29,12 +29,32 @@
 }
 
 /* Image always fills and covers while preserving aspect ratio */
-.slideImage {
+.slideImage,
+.youtubeFrame,
+.youtubeWrap {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* <-- makes it cover and clip */
-  object-position: center; /* adjust if you want a focal point */
   display: block;
+}
+
+/* For <img>/<video> */
+.slideImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* For YouTube: make iframe behave like cover */
+.youtubeWrap {
+  position: relative;
+}
+.youtubeFrame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  /* Trick to “cover”: YouTube is 16:9; to truly cover arbitrary boxes you can oversize via scale.
+     Simple approach below usually looks good; for precise cover behavior use CSS transform/JS to letterbox. */
 }
 
 /* -------- Caption positioning -------- */
@@ -99,11 +119,10 @@
 :global(.carousel-control-prev-icon),
 :global(.carousel-control-next-icon) {
   /* Option 1: simple recolor with filter (white by default, invert to dark on light BG) */
-  filter: invert(
-    1
-  ); /* makes icons light on dark backgrounds; set to 0 for dark on light */
-  width: 2.25rem;
-  height: 2.25rem;
+  /* filter: invert(1); */
+  /* makes icons light on dark backgrounds; set to 0 for dark on light */
+  width: 3.25rem;
+  height: 3.25rem;
 }
 
 /* If you want a specific color, swap the SVG fill via data URL: */
