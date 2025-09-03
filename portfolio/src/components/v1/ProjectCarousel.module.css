@@ -1,0 +1,145 @@
+/* Root tweaks (optional) */
+/* .carouselRoot :global(.carousel) {
+  position: relative;
+  border-radius: 16px; 
+  overflow: hidden;
+  background: #0b0b0b;
+} */
+
+/* Ensure inner pieces respect the rounding */
+:global(.carousel),
+:global(.carousel .carousel-inner),
+:global(.carousel .carousel-item) {
+  border-radius: inherit;
+}
+
+/* Ensure the .carousel-item can contain our custom box */
+.carouselItem {
+  position: relative;
+  background: #0b0b0b00; /* fallback while image loads */
+}
+
+/* This box defines the visible slide area. Change height via prop. */
+.slideBox {
+  width: 100%;
+  height: 60vh; /* default overridden by prop */
+  position: relative;
+  overflow: hidden; /* ensures image clipping */
+  border-radius: 16px; /* nice look—optional */
+}
+
+/* Image always fills and covers while preserving aspect ratio */
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* <-- makes it cover and clip */
+  object-position: center; /* adjust if you want a focal point */
+  display: block;
+}
+
+/* -------- Caption positioning -------- */
+.caption {
+  text-align: left; /* default; you can override per-position below */
+  /* a bit of contrast for readability */
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.65);
+}
+
+.captionTitle {
+  margin-bottom: 0.25rem;
+}
+
+.captionText {
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* Positions (use the prop to pick one) */
+.bottom-left {
+  left: 1.25rem;
+  right: auto;
+  bottom: 1.25rem;
+  top: auto;
+  transform: none;
+}
+
+.bottom-right {
+  right: 1.25rem;
+  left: auto;
+  bottom: 1.25rem;
+  top: auto;
+  text-align: right;
+}
+
+.top-left {
+  left: 1.25rem;
+  right: auto;
+  top: 1.25rem;
+  bottom: auto;
+}
+
+.top-right {
+  right: 1.25rem;
+  left: auto;
+  top: 1.25rem;
+  bottom: auto;
+  text-align: right;
+}
+
+.center {
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* -------- Control colors (prev/next arrows) -------- */
+/* Bootstrap uses mask-image SVGs; easiest is to recolor via filter invert or custom bg-image */
+:global(.carousel-control-prev-icon),
+:global(.carousel-control-next-icon) {
+  /* Option 1: simple recolor with filter (white by default, invert to dark on light BG) */
+  filter: invert(
+    1
+  ); /* makes icons light on dark backgrounds; set to 0 for dark on light */
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+/* If you want a specific color, swap the SVG fill via data URL: */
+/*
+:global(.carousel-control-prev-icon) {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 16 16' fill='%23ff6b6b' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.354 1.646a.5.5 0 010 .708L6.707 7l4.647 4.646a.5.5 0 01-.708.708l-5-5a.5.5 0 010-.708l5-5a.5.5 0 01.708 0z'/%3E%3C/svg%3E");
+}
+:global(.carousel-control-next-icon) {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 16 16' fill='%23ff6b6b' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.646 1.646a.5.5 0 000 .708L9.293 7l-4.647 4.646a.5.5 0 00.708.708l5-5a.5.5 0 000-.708l-5-5a.5.5 0 00-.708 0z'/%3E%3C/svg%3E");
+}
+*/
+
+/* -------- Indicator dots color -------- */
+:global(.carousel-indicators [data-bs-target]),
+:global(.carousel-indicators .active) {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+:global(.carousel-indicators [data-bs-target]) {
+  background-color: rgba(255, 255, 255, 0.6); /* inactive */
+}
+
+:global(.carousel-indicators .active) {
+  background-color: #ffffff; /* active dot */
+}
+
+/* Optional: give captions a subtle backdrop for legibility */
+.caption :global(h3),
+.caption :global(p) {
+  /* /* Uncomment for pill backdrop: */
+  /* background: rgba(0, 0, 0, 0.45);
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem; */
+
+  color: #fff;
+}
